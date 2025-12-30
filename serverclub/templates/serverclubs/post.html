@@ -10,11 +10,13 @@
 
     </header>
 
-  <!-- Posts Display -->
+<!-- Posts Display -->
     <div id="content">
         {% for post in posts %}
         <div class="post-box">
+        {% if post.image %}
             <img src="{{ post.image.url }}" alt="{{ post.title }} Image">
+        {% endif %}
             <h3>Post Title: {{ post.title }}</h3>
             <div class="post-content">
                 <p>{{ post.content }}</p>
